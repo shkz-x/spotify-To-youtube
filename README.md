@@ -61,15 +61,15 @@ ytmusicapi browser
 2. Open Developer Tools (`Ctrl + Shift + I`)
 3. Go to **Network**
 4. In the filter box, search for `get?prettyPrint`
-5. Click **Library** or scroll to trigger requests
-6. Select a request with:
+5. Select a request with:
 
    * Status: `200`
    * Method: `POST`
    * Domain: `music.youtube.com`
-7. Right click → **Copy → Copy request headers**
-8. Paste them into the terminal
-9. Press **Ctrl + D**
+
+6. Right click → **Copy → Copy request headers**
+7. Paste them into the terminal
+8. Press **Ctrl + D**
 
 ---
 
