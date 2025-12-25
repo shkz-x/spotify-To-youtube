@@ -104,3 +104,7 @@ python import.py "My Playlist.csv" --dry-run
 ```
 
 Tests matching without adding songs.
+
+---
+
+![Preview](image.png)
