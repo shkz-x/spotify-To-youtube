@@ -108,3 +108,37 @@ Tests matching without adding songs.
 ---
 
 ![Preview](image.png)
+
+---
+
+### Export spotify likes to a csv with spotify-likes-to-csv.py
+
+Instead of using third-party websites, use the included `spotify-likes-to-csv.py` script to generate a clean CSV compatible with the importer.
+
+#### Prerequisites
+1.  **Create a Spotify App:**
+    * Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
+    * Click **Create app**.
+    * Set **Redirect URI** to: `http://127.0.0.1:8888/callback`
+    * Check **Web API** under APIs/SDKs.
+2.  **Get Credentials:**
+    * Copy your **Client ID** and **Client Secret** from the app settings.
+
+#### Usage
+1.  Edit `spotify-likes-to-csv.py` and paste your credentials:
+    ```python
+    CLIENT_ID = 'your_client_id'
+    CLIENT_SECRET = 'your_client_secret'
+    ```
+2.  Install dependencies (if not already installed):
+    ```bash
+    pip install spotipy pandas
+    ```
+3.  Run the exporter:
+    ```bash
+    python spotify-likes-to-csv.py
+    ```
+    *On the first run, a browser window will open. Accept the permissions to allow the script to read your library.*
+
+**Output:** A file named `spotify_likes.csv` will be created with the correct format (`Song`, `Artist`, `Album`, `ISRC`).
+
